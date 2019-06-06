@@ -18,4 +18,23 @@ public class Internship {
     public void setInternship(String name) {
         this.name = name;
     }
+
+    public void addStudents() {
+        ArrayList<Student> students = university.getUniversityStudent();
+        for(Student student : students) {
+            if(student.getKnowledge().getLevel() > university.getKnowledge())
+                internship.add(student);
+        }
+    }
+
+    public String getStudents() {
+        String listOfStudent = "";
+
+        for(Student student : internship) {
+            listOfStudent += student.getName();
+            listOfStudent += "\n";
+        };
+
+        return listOfStudent;
+    }
 }
