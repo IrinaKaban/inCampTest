@@ -8,7 +8,8 @@ public class Knowledge {
     }
 
     private void setLevel(float level) throws Exception {
-        if(level < 0) throw new Exception("Не вказаний рівень знань");
+        if(level == 0) throw new Exception("Не вказаний рівень знань");
+        if(level < 0) throw new Exception("Рівень знань не може бути менший нуля");
         this.level = level;
     }
 
