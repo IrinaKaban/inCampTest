@@ -1,7 +1,17 @@
 package person.consciousness;
 
 public class Knowledge {
-    public Knowledge(int level) {
-        //TODO: Implementation is needed
+    private float level;
+
+    public Knowledge(float level) throws Exception {
+        setLevel(level);
+    }
+
+    private void setLevel(float level) {
+        this.level = level;
+    }
+
+    public float getLevel() {
+        return level;
     }
 }
