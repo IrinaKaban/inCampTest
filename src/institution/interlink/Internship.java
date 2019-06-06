@@ -10,12 +10,13 @@ public class Internship {
     ArrayList<Student> internship = new ArrayList<Student>();
     University university;
 
-    public Internship(String name, University university) {
+    public Internship(String name, University university) throws Exception {
         setInternship(name);
         this.university = university;
     }
 
-    public void setInternship(String name) {
+    public void setInternship(String name) throws Exception {
+        if(name.equals("")) throw new Exception("Не вказана назва");
         this.name = name;
     }
 
