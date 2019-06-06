@@ -23,4 +23,13 @@ public class University {
     public ArrayList<Student> getUniversityStudent() {
         return students;
     }
+
+    public float getKnowledge() {
+        float sum = 0;
+
+        for(Student student : students)
+            sum += student.getKnowledge().getLevel();
+
+        return sum / students.size();
+    }
 }
