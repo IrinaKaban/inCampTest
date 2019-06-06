@@ -12,7 +12,8 @@ public class University {
         setUniversity(name);
     }
 
-    private void setUniversity(String name) {
+    private void setUniversity(String name) throws Exception {
+        if(name.equals("")) throw new Exception("Не вказана назва університета");
         this.name = name;
     }
 
